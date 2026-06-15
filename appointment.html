@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>線上預約 — 禾睿牙醫診所｜台中牙醫預約掛號</title>
+  <meta name="description" content="禾睿牙醫線上預約系統，提供植牙、矯正、美白、兒童牙科等初診諮詢預約，預約制不等待，讓您的就醫時間更有效率。">
+  <link rel="canonical" href="https://izzo24.github.io/herui-dental/appointment.html">
+  <meta property="og:title" content="線上預約 — 禾睿牙醫診所">
+  <meta property="og:url" content="https://izzo24.github.io/herui-dental/appointment.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><text y='22' x='5' font-size='20' font-family='serif'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .appt-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 48px;
+      align-items: start;
+    }
+    .appt-form-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .appt-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 100px;
+    }
+    .appt-info-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+    .appt-info-card h3 { font-size: 1rem; margin-bottom: 20px; color: var(--text); }
+    .appt-hours { display: flex; flex-direction: column; gap: 10px; }
+    .appt-hour {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+    .appt-hour-day { color: var(--text-mid); }
+    .appt-hour-time { color: var(--text); font-weight: 600; }
+    .appt-hour-time.closed { color: var(--text-light); }
+    .appt-notice {
+      background: var(--gold-light);
+      border: 1px solid #E5C880;
+      border-radius: var(--radius);
+      padding: 16px;
+      font-size: 0.85rem;
+      color: #7A5C00;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .form-section-title:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+
+    @media (max-width: 960px) {
+      .appt-layout { grid-template-columns: 1fr; }
+      .appt-sidebar { position: static; }
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .appt-form-card { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">🦷 禾睿</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1 4.5 2.5 6L9 21h6l1.5-6C18 13.5 19 11.5 19 9c0-3.5-3-7-7-7z" stroke-linejoin="round"/><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">禾睿牙醫診所</span>
+            <span class="nav-logo-sub">Herui Dental Clinic</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="doctors.html" class="nav-link">醫師團隊</a></li>
+          <li><a href="contact.html" class="nav-link">聯絡我們</a></li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary nav-cta">立即預約</a>
+        <button class="nav-hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <button class="nav-mobile-close">✕</button>
+    <a href="index.html" class="nav-link">首頁</a>
+    <a href="services.html" class="nav-link">服務項目</a>
+    <a href="doctors.html" class="nav-link">醫師團隊</a>
+    <a href="contact.html" class="nav-link">聯絡我們</a>
+    <a href="appointment.html" class="btn btn-primary">立即預約</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb" style="justify-content:center">
+          <a href="index.html">首頁</a><span class="breadcrumb-sep">›</span><span>線上預約</span>
+        </div>
+        <span class="eyebrow">Online Booking</span>
+        <h1>線上預約掛號</h1>
+        <p>填寫以下表單，我們將於 2 小時內電話確認您的預約，採預約制讓您準時看診不久候。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <section style="padding:48px 0 0">
+    <div class="container">
+      <div class="steps">
+        <div class="step active">
+          <div class="step-circle">1</div>
+          <div class="step-label">填寫資料</div>
+        </div>
+        <div class="step">
+          <div class="step-circle">2</div>
+          <div class="step-label">電話確認</div>
+        </div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <div class="step-label">準時就診</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="appt-layout">
+
+        <!-- Form -->
+        <div class="appt-form-card reveal">
+          <form id="appointment-form" novalidate>
+
+            <div class="form-section-title">個人資料</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">姓名 <span class="req">*</span></label>
+                <input type="text" class="form-input" placeholder="王小明" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">性別</label>
+                <select class="form-select">
+                  <option value="">請選擇</option>
+                  <option>先生</option>
+                  <option>小姐</option>
+                  <option>不指定</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">聯絡電話 <span class="req">*</span></label>
+                <input type="tel" class="form-input" placeholder="09XX-XXX-XXX" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">電子郵件</label>
+                <input type="email" class="form-input" placeholder="your@email.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">年齡範圍</label>
+              <select class="form-select">
+                <option value="">請選擇</option>
+                <option>18 歲以下（兒童）</option>
+                <option>18–30 歲</option>
+                <option>31–45 歲</option>
+                <option>46–60 歲</option>
+                <option>61 歲以上</option>
+              </select>
+            </div>
+
+            <div class="form-section-title">預約資訊</div>
+
+            <div class="form-group">
+              <label class="form-label">希望看診醫師</label>
+              <select class="form-select">
+                <option value="">不指定，依診次安排</option>
+                <option>陳柏睿醫師（院長・植牙專科）</option>
+                <option>林欣怡醫師（矯正科）</option>
+                <option>黃文哲醫師（牙周科・兒童牙科）</option>
+                <option>王雅婷醫師（一般・美容牙科）</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">主要需求 <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="">請選擇診療項目</option>
+                <optgroup label="一般牙科">
+                  <option>一般洗牙・檢查</option>
+                  <option>蛀牙填補</option>
+                  <option>根管治療</option>
+                  <option>假牙・全瓷冠</option>
+                  <option>拔牙・智齒</option>
+                </optgroup>
+                <optgroup label="專科治療">
+                  <option>植牙諮詢</option>
+                  <option>矯正諮詢（隱適美）</option>
+                  <option>矯正諮詢（傳統）</option>
+                  <option>牙齒美白諮詢</option>
+                  <option>牙周病治療</option>
+                </optgroup>
+                <optgroup label="兒童牙科">
+                  <option>兒童初診</option>
+                  <option>兒童定期檢查</option>
+                  <option>兒童矯正評估</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">希望日期 <span class="req">*</span></label>
+                <input type="date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">偏好時段 <span class="req">*</span></label>
+                <select class="form-select" required>
+                  <option value="">請選擇</option>
+                  <option>上午（09:00–12:00）</option>
+                  <option>下午（13:00–17:00）</option>
+                  <option>傍晚（17:00–21:00）</option>
+                  <option>不指定</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">是否曾在本診所就診</label>
+              <div class="form-checkbox-group">
+                <label class="form-checkbox-label">
+                  <input type="radio" name="existing" value="new"> 初次就診
+                </label>
+                <label class="form-checkbox-label">
+                  <input type="radio" name="existing" value="returning"> 舊患者回診
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section-title">補充說明</div>
+
+            <div class="form-group">
+              <label class="form-label">症狀或特殊需求說明</label>
+              <textarea class="form-textarea" placeholder="如：牙齦出血、牙痛位置、特定過敏史、是否正在服藥，或其他需要告知醫師的事項…" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox-label" style="align-items:flex-start;gap:12px">
+                <input type="checkbox" required style="margin-top:4px">
+                <span>我已閱讀並同意診所的<a href="#" style="color:var(--primary)">隱私權保護政策</a>，並授權診所使用我的個人資料進行預約及後續服務聯繫。</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px">
+              📋 送出預約申請
+            </button>
+
+            <p style="text-align:center;margin-top:16px;font-size:0.8rem;color:var(--text-light)">
+              預約送出後，我們將於 2 小時內電話與您確認時間
+            </p>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="appt-sidebar reveal reveal-delay-2">
+          <div class="appt-info-card">
+            <h3>📅 看診時間</h3>
+            <div class="appt-hours">
+              <div class="appt-hour">
+                <span class="appt-hour-day">週一</span>
+                <span class="appt-hour-time">09:00 – 21:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週二</span>
+                <span class="appt-hour-time">09:00 – 21:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週三</span>
+                <span class="appt-hour-time">09:00 – 21:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週四</span>
+                <span class="appt-hour-time">09:00 – 21:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週五</span>
+                <span class="appt-hour-time">09:00 – 21:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週六</span>
+                <span class="appt-hour-time">09:00 – 17:00</span>
+              </div>
+              <div class="appt-hour">
+                <span class="appt-hour-day">週日 / 國定假日</span>
+                <span class="appt-hour-time closed">公休</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="appt-info-card">
+            <h3>📍 診所地址</h3>
+            <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.8">
+              台中市西屯區台灣大道三段 123 號 8 樓<br>
+              捷運台灣大道站 3 號出口步行約 5 分鐘<br>
+              診所樓下停車場可停車（前 2 小時優惠）
+            </p>
+          </div>
+
+          <div class="appt-info-card">
+            <h3>📞 電話預約</h3>
+            <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:12px">如需立即預約，也可直接來電</p>
+            <a href="tel:+886423456789" class="btn btn-primary" style="width:100%;justify-content:center">
+              (04) 2345-6789
+            </a>
+          </div>
+
+          <div class="appt-notice">
+            <strong>📌 初診提醒</strong><br>
+            請於預約時間前 10 分鐘抵達診所，並攜帶健保卡。如需取消或更改，請於 24 小時前告知，謝謝。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🦷 禾睿牙醫診所</h3>
+          <p>台中市西屯區的專業牙醫診所，提供全方位口腔醫療照護。</p>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作</div>
+        </div>
+        <div class="footer-col">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="services.html">服務項目</a></li>
+            <li><a href="doctors.html">醫師團隊</a></li>
+            <li><a href="appointment.html">線上預約</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>主要服務</h4>
+          <ul>
+            <li><a href="services.html#implant">植牙手術</a></li>
+            <li><a href="services.html#ortho">牙齒矯正</a></li>
+            <li><a href="services.html#whitening">牙齒美白</a></li>
+            <li><a href="services.html#children">兒童牙科</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>診所資訊</h4>
+          <ul>
+            <li><a href="#">台中市西屯區台灣大道三段123號8F</a></li>
+            <li><a href="tel:+886423456789">(04) 2345-6789</a></li>
+            <li><a href="#">週一至五 9:00–21:00</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2024 禾睿牙醫診所 Herui Dental Clinic. 版權所有。</div>
+        <div>網站製作：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">橋序創研 BridgeSeq Lab</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="回到頂部">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set min date to today
+    const dateInput = document.querySelector('input[type="date"]');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.min = today;
+    }
+  </script>
+</body>
+</html>

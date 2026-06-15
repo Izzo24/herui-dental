@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們 — 禾睿牙醫診所｜台中西屯區牙醫</title>
+  <meta name="description" content="禾睿牙醫診所聯絡資訊：地址台中市西屯區台灣大道三段123號8F，電話(04)2345-6789，週一至四9-21時，週六9-17時。提供線上諮詢表單。">
+  <link rel="canonical" href="https://izzo24.github.io/herui-dental/contact.html">
+  <meta property="og:title" content="聯絡我們 — 禾睿牙醫診所">
+  <meta property="og:url" content="https://izzo24.github.io/herui-dental/contact.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><text y='22' x='5' font-size='20' font-family='serif'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-form-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .contact-info-section {}
+    .contact-info-section h2 { margin-bottom: 32px; }
+    .transport-section {
+      background: var(--primary-pale);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .transport-section h3 { font-size: 1rem; margin-bottom: 16px; color: var(--primary); }
+    .transport-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+    .transport-emoji { flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">🦷 禾睿</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1 4.5 2.5 6L9 21h6l1.5-6C18 13.5 19 11.5 19 9c0-3.5-3-7-7-7z" stroke-linejoin="round"/><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">禾睿牙醫診所</span>
+            <span class="nav-logo-sub">Herui Dental Clinic</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="doctors.html" class="nav-link">醫師團隊</a></li>
+          <li><a href="contact.html" class="nav-link active">聯絡我們</a></li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary nav-cta">立即預約</a>
+        <button class="nav-hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <button class="nav-mobile-close">✕</button>
+    <a href="index.html" class="nav-link">首頁</a>
+    <a href="services.html" class="nav-link">服務項目</a>
+    <a href="doctors.html" class="nav-link">醫師團隊</a>
+    <a href="contact.html" class="nav-link">聯絡我們</a>
+    <a href="appointment.html" class="btn btn-primary">立即預約</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb" style="justify-content:center">
+          <a href="index.html">首頁</a><span class="breadcrumb-sep">›</span><span>聯絡我們</span>
+        </div>
+        <span class="eyebrow">Contact Us</span>
+        <h1>我們期待您的來訪</h1>
+        <p>有任何問題，歡迎填寫下方表單或直接來電，我們將盡快回覆。</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: Info -->
+        <div class="contact-info-section reveal">
+          <h2>診所聯絡資訊</h2>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">診所地址</div>
+              <div class="contact-info-value">台中市西屯區台灣大道三段 123 號 8 樓</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.59a16 16 0 006.29 6.29l.96-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">電話</div>
+              <div class="contact-info-value"><a href="tel:+886423456789" style="color:var(--primary)">(04) 2345-6789</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">電子郵件</div>
+              <div class="contact-info-value"><a href="mailto:info@herui-dental.com.tw" style="color:var(--primary)">info@herui-dental.com.tw</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">看診時間</div>
+              <div class="contact-info-value">
+                週一至週五 09:00 – 21:00<br>
+                週六 09:00 – 17:00<br>
+                週日及國定假日公休
+              </div>
+            </div>
+          </div>
+
+          <div class="map-embed" style="margin:32px 0">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div style="font-weight:600;color:var(--text);font-size:1rem">禾睿牙醫診所</div>
+              <div>台中市西屯區台灣大道三段 123 號 8 樓</div>
+              <a href="https://maps.google.com/?q=台中市西屯區台灣大道三段123號" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:12px;font-size:0.8rem;padding:8px 20px">
+                在 Google Maps 開啟
+              </a>
+            </div>
+          </div>
+
+          <div class="transport-section">
+            <h3>🚇 交通資訊</h3>
+            <div class="transport-item">
+              <span class="transport-emoji">🚇</span>
+              <span>捷運台灣大道站 3 號出口，步行約 5 分鐘</span>
+            </div>
+            <div class="transport-item">
+              <span class="transport-emoji">🚌</span>
+              <span>公車台灣大道台文站，步行 2 分鐘</span>
+            </div>
+            <div class="transport-item">
+              <span class="transport-emoji">🚗</span>
+              <span>建議停放於大樓附設停車場（初診免費 2 小時）</span>
+            </div>
+            <div class="transport-item">
+              <span class="transport-emoji">🚲</span>
+              <span>YouBike 2.0 台灣大道站距診所 100 公尺</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-card reveal reveal-delay-1">
+          <h3 style="margin-bottom:8px">💬 傳訊息給我們</h3>
+          <p style="font-size:0.875rem;color:var(--text-light);margin-bottom:32px">填寫表單後，我們將於一個工作天內回覆</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">您的姓名 <span class="req">*</span></label>
+                <input type="text" class="form-input" placeholder="王小明" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">聯絡電話 <span class="req">*</span></label>
+                <input type="tel" class="form-input" placeholder="09XX-XXX-XXX" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">電子郵件</label>
+              <input type="email" class="form-input" placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">諮詢主題 <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="">請選擇</option>
+                <option>服務項目諮詢</option>
+                <option>費用相關問題</option>
+                <option>預約相關</option>
+                <option>就醫前疑問</option>
+                <option>其他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">訊息內容 <span class="req">*</span></label>
+              <textarea class="form-textarea" rows="5" placeholder="請詳述您的問題或需求，我們將盡快為您回覆…" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">偏好聯絡方式</label>
+              <div class="form-checkbox-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" checked> 電話
+                </label>
+                <label class="form-checkbox-label">
+                  <input type="checkbox"> Email
+                </label>
+                <label class="form-checkbox-label">
+                  <input type="checkbox"> LINE
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem">
+              ✉️ 送出訊息
+            </button>
+          </form>
+
+          <div style="margin-top:28px;padding-top:28px;border-top:1px solid var(--border)">
+            <p style="font-size:0.875rem;color:var(--text-mid);text-align:center;margin-bottom:16px">或直接撥打電話預約</p>
+            <a href="tel:+886423456789" class="btn btn-secondary" style="width:100%;justify-content:center">
+              📞 (04) 2345-6789
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>準備好來訪了嗎？</h2>
+      <p>立即線上預約，讓我們為您安排最方便的看診時間</p>
+      <div class="cta-banner-buttons">
+        <a href="appointment.html" class="btn btn-gold">立即線上預約</a>
+        <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">了解橋序創研</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🦷 禾睿牙醫診所</h3>
+          <p>台中市西屯區的專業牙醫診所，提供全方位口腔醫療照護。</p>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作</div>
+        </div>
+        <div class="footer-col">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="services.html">服務項目</a></li>
+            <li><a href="doctors.html">醫師團隊</a></li>
+            <li><a href="appointment.html">線上預約</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>主要服務</h4>
+          <ul>
+            <li><a href="services.html#implant">植牙手術</a></li>
+            <li><a href="services.html#ortho">牙齒矯正</a></li>
+            <li><a href="services.html#whitening">牙齒美白</a></li>
+            <li><a href="services.html#children">兒童牙科</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>診所資訊</h4>
+          <ul>
+            <li><a href="#">台中市西屯區台灣大道三段123號8F</a></li>
+            <li><a href="tel:+886423456789">(04) 2345-6789</a></li>
+            <li><a href="#">週一至五 9:00–21:00</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2024 禾睿牙醫診所 Herui Dental Clinic. 版權所有。</div>
+        <div>網站製作：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">橋序創研 BridgeSeq Lab</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="回到頂部">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

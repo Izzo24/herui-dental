@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>禾睿牙醫診所 — 台中專業牙科｜植牙・矯正・兒童牙科</title>
+  <meta name="description" content="禾睿牙醫診所位於台中，提供植牙、牙齒矯正、美白、兒童牙科等完整牙醫服務。採預約制不等待，親切專業的醫療團隊守護您全家的口腔健康。">
+  <meta name="keywords" content="台中牙醫,禾睿牙醫,台中植牙,台中矯正,台中牙科診所,牙齒美白,兒童牙科,預防牙科">
+  <link rel="canonical" href="https://izzo24.github.io/herui-dental/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://izzo24.github.io/herui-dental/">
+  <meta property="og:title" content="禾睿牙醫診所 — 台中專業牙科">
+  <meta property="og:description" content="台中市專業牙醫診所，植牙・矯正・美白・兒童牙科，採預約制讓您不用等。">
+  <meta property="og:image" content="https://izzo24.github.io/herui-dental/screenshot-hero.jpg">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><text y='22' x='5' font-size='20' font-family='serif'>🦷</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "禾睿牙醫診所",
+    "alternateName": "Herui Dental Clinic",
+    "description": "台中市專業牙醫診所，提供植牙、矯正、美白、兒童牙科等完整口腔醫療服務。",
+    "url": "https://izzo24.github.io/herui-dental/",
+    "logo": "https://izzo24.github.io/herui-dental/screenshot-hero.jpg",
+    "telephone": "+886-4-2345-6789",
+    "email": "info@herui-dental.com.tw",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "西屯區台灣大道三段123號8樓",
+      "addressLocality": "台中市",
+      "addressRegion": "台中市",
+      "postalCode": "407",
+      "addressCountry": "TW"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 24.1628,
+      "longitude": 120.6472
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "17:00" }
+    ],
+    "priceRange": "$$",
+    "sameAs": [],
+    "medicalSpecialty": ["Dentistry", "OralSurgery"],
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "植牙手術" },
+      { "@type": "MedicalProcedure", "name": "牙齒矯正" },
+      { "@type": "MedicalProcedure", "name": "牙齒美白" },
+      { "@type": "MedicalProcedure", "name": "兒童牙科" },
+      { "@type": "MedicalProcedure", "name": "牙周病治療" }
+    ],
+    "hasMap": "https://maps.google.com/?q=台中市西屯區台灣大道三段123號"
+  }
+  </script>
+
+  <style>
+    /* Home-specific styles */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #064744 0%, #0B7B74 45%, #14A99F 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 60px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(20,169,159,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,150,58,0.15) 0%, transparent 60%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content {}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+    .hero-badge-dot {
+      width: 8px; height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+    .hero h1 { color: white; margin-bottom: 20px; }
+    .hero h1 span { color: #C9963A; }
+    .hero-desc { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 36px; line-height: 1.8; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-trust { display: flex; gap: 24px; flex-wrap: wrap; }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+    }
+    .hero-trust-item svg { width: 18px; height: 18px; stroke: #4ade80; fill: none; stroke-width: 2.5; }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual-main {
+      width: 380px; height: 380px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-visual-inner {
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-emoji { font-size: 7rem; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2)); }
+
+    .hero-float-1 {
+      position: absolute;
+      top: 20px; right: -20px;
+      animation: floatY 3.5s ease-in-out infinite;
+    }
+    .hero-float-2 {
+      position: absolute;
+      bottom: 40px; left: -30px;
+      animation: floatY 2.8s ease-in-out 1.2s infinite;
+    }
+
+    /* Feature strip */
+    .feature-strip {
+      background: white;
+      border-top: 4px solid var(--primary);
+      padding: 40px 0;
+    }
+    .feature-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .feature-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .feature-strip-icon {
+      width: 48px; height: 48px;
+      background: var(--primary-pale);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-strip-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 2; }
+    .feature-strip-text { font-weight: 600; font-size: 0.9rem; color: var(--text); }
+    .feature-strip-sub { font-size: 0.78rem; color: var(--text-light); }
+
+    /* Why us section */
+    .why-us {
+      background: var(--bg);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .why-visual {
+      position: relative;
+    }
+    .why-visual-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+    .why-emoji { font-size: 4rem; margin-bottom: 16px; }
+    .why-visual-card h3 { margin-bottom: 8px; }
+    .why-visual-card p { font-size: 0.9rem; }
+    .why-badge {
+      position: absolute;
+      top: -16px; right: 24px;
+      background: var(--gold);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(201,150,58,0.4);
+    }
+    .why-points { display: flex; flex-direction: column; gap: 24px; }
+    .why-point { display: flex; gap: 16px; align-items: flex-start; }
+    .why-point-num {
+      width: 36px; height: 36px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .why-point h4 { font-size: 1rem; margin-bottom: 4px; }
+    .why-point p { font-size: 0.875rem; }
+
+    /* Services preview */
+    .service-card {
+      padding: 32px;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-emoji { font-size: 2.5rem; margin-bottom: 16px; }
+    .service-card h3 { margin-bottom: 10px; }
+    .service-card p { font-size: 0.875rem; margin-bottom: 20px; }
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: gap var(--transition);
+    }
+    .service-card:hover .service-card-link { gap: 10px; }
+
+    /* Doctors preview */
+    .doctors-section { background: var(--bg-alt); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-visual { order: -1; }
+      .hero-visual-main { width: 280px; height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">🦷 禾睿</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="siteNav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1 4.5 2.5 6L9 21h6l1.5-6C18 13.5 19 11.5 19 9c0-3.5-3-7-7-7z" stroke-linejoin="round"/><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">禾睿牙醫診所</span>
+            <span class="nav-logo-sub">Herui Dental Clinic</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="doctors.html" class="nav-link">醫師團隊</a></li>
+          <li><a href="contact.html" class="nav-link">聯絡我們</a></li>
+        </ul>
+
+        <a href="appointment.html" class="btn btn-primary nav-cta">立即預約</a>
+
+        <button class="nav-hamburger" aria-label="開啟選單">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile">
+    <button class="nav-mobile-close" aria-label="關閉選單">✕</button>
+    <a href="index.html" class="nav-link">首頁</a>
+    <a href="services.html" class="nav-link">服務項目</a>
+    <a href="doctors.html" class="nav-link">醫師團隊</a>
+    <a href="contact.html" class="nav-link">聯絡我們</a>
+    <a href="appointment.html" class="btn btn-primary">立即預約</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            台中西屯區・預約制即看診
+          </div>
+          <h1>守護您的笑容，<br>從<span>此刻</span>開始</h1>
+          <p class="hero-desc">
+            禾睿牙醫提供植牙、矯正、美白等全方位口腔醫療，
+            以數位影像精準診斷，讓每次就醫都成為舒適的體驗。
+          </p>
+          <div class="hero-buttons">
+            <a href="appointment.html" class="btn btn-gold">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              立即線上預約
+            </a>
+            <a href="services.html" class="btn btn-outline-white">探索服務項目</a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              專業醫師團隊
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              數位X光診斷
+            </div>
+            <div class="hero-trust-item">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              預約制不等待
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-main">
+            <div class="hero-visual-inner">
+              <div class="hero-emoji">🦷</div>
+            </div>
+          </div>
+          <div class="float-card hero-float-1">
+            <div class="float-card-icon">✅</div>
+            <div>
+              <div class="float-card-text">預約確認</div>
+              <div class="float-card-sub">今日下午 2:30</div>
+            </div>
+          </div>
+          <div class="float-card hero-float-2 float-card-2">
+            <div class="float-card-icon">⭐</div>
+            <div>
+              <div class="float-card-text">4.9 / 5.0</div>
+              <div class="float-card-sub">Google 評價</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Strip -->
+  <div class="feature-strip">
+    <div class="container">
+      <div class="feature-strip-grid">
+        <div class="feature-strip-item reveal">
+          <div class="feature-strip-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="feature-strip-text">彈性看診時間</div>
+            <div class="feature-strip-sub">週一至五 9:00–21:00，週六至 17:00</div>
+          </div>
+        </div>
+        <div class="feature-strip-item reveal reveal-delay-1">
+          <div class="feature-strip-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <div class="feature-strip-text">數位 X 光系統</div>
+            <div class="feature-strip-sub">低輻射・高精準・即時影像</div>
+          </div>
+        </div>
+        <div class="feature-strip-item reveal reveal-delay-2">
+          <div class="feature-strip-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="feature-strip-text">專業醫療團隊</div>
+            <div class="feature-strip-sub">各科專科醫師，一站式照護</div>
+          </div>
+        </div>
+        <div class="feature-strip-item reveal reveal-delay-3">
+          <div class="feature-strip-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="feature-strip-text">健保與自費並行</div>
+            <div class="feature-strip-sub">透明報價，治療前充分說明</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="reveal">
+          <div class="stat-number"><span data-count="12" data-suffix="">12</span><span class="stat-unit">+</span></div>
+          <div class="stat-label">執業年資</div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="stat-number"><span data-count="8500">8,500</span><span class="stat-unit">+</span></div>
+          <div class="stat-label">服務患者人次</div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="stat-number"><span data-count="6">6</span><span class="stat-unit"></span></div>
+          <div class="stat-label">專科醫師</div>
+        </div>
+        <div class="reveal reveal-delay-3">
+          <div class="stat-number"><span data-count="98" data-suffix="%">98%</span></div>
+          <div class="stat-label">患者滿意度</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section>
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">服務項目</span>
+        <h2>全方位口腔醫療服務</h2>
+        <p>從預防保健到專科治療，禾睿牙醫提供一站式的完整口腔醫療照護，讓您和家人都能在此找到所需的牙科服務。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="service-card reveal">
+          <div class="service-emoji">🦷</div>
+          <h3>植牙</h3>
+          <p>採用德國 Straumann 植牙系統，手術精準、骨整合穩定，讓您找回自然咬合力。</p>
+          <a href="services.html#implant" class="service-card-link">了解更多 →</a>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-emoji">😁</div>
+          <h3>牙齒矯正</h3>
+          <p>提供傳統金屬、陶瓷及隱適美透明矯正，針對您的需求規劃最佳療程。</p>
+          <a href="services.html#ortho" class="service-card-link">了解更多 →</a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-emoji">✨</div>
+          <h3>牙齒美白</h3>
+          <p>專業冷光美白與居家漂白套組，安全有效地為您還原亮白自信笑容。</p>
+          <a href="services.html#whitening" class="service-card-link">了解更多 →</a>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-emoji">🧒</div>
+          <h3>兒童牙科</h3>
+          <p>溫柔友善的環境與兒牙專科醫師，幫助孩子從小建立正確的口腔保健習慣。</p>
+          <a href="services.html#children" class="service-card-link">了解更多 →</a>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-emoji">🩺</div>
+          <h3>牙周病治療</h3>
+          <p>深層牙結石清除、牙周翻瓣手術，全方位守護您的牙床健康。</p>
+          <a href="services.html#perio" class="service-card-link">了解更多 →</a>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-emoji">🛡️</div>
+          <h3>預防保健</h3>
+          <p>定期洗牙、塗氟、窩溝封填，預防勝於治療，守護全家口腔健康。</p>
+          <a href="services.html#prevention" class="service-card-link">了解更多 →</a>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px" class="reveal">
+        <a href="services.html" class="btn btn-secondary">查看所有服務</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us">
+    <div class="container">
+      <div class="why-grid">
+        <div class="reveal">
+          <span class="eyebrow">為什麼選擇我們</span>
+          <h2>專業團隊・溫暖醫療</h2>
+          <p style="margin-bottom:36px">我們相信口腔健康不只是治療，更是信任的建立。禾睿牙醫以耐心傾聽、詳細說明、精準治療為核心，陪伴每位患者守護一生的健康。</p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="why-point-num">1</div>
+              <div>
+                <h4>全數位化診療流程</h4>
+                <p>口腔掃描、3D X光、數位備牙一體整合，精準且高效率。</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-point-num">2</div>
+              <div>
+                <h4>治療前透明報價</h4>
+                <p>詳細說明治療計畫與費用，沒有隱藏費用，讓您安心決策。</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-point-num">3</div>
+              <div>
+                <h4>預約制準時看診</h4>
+                <p>完善預約系統確保您的時間不被浪費，進時到、準時診。</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-point-num">4</div>
+              <div>
+                <h4>完整術後追蹤</h4>
+                <p>植牙、矯正、手術後提供固定回診提醒與健康追蹤服務。</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:36px">
+            <a href="appointment.html" class="btn btn-primary">預約初診諮詢</a>
+          </div>
+        </div>
+        <div class="why-visual reveal reveal-delay-2">
+          <div class="why-visual-card">
+            <div class="why-badge">🏆 口腔醫學認證</div>
+            <div class="why-emoji">🏥</div>
+            <h3>台中醫療品質認證診所</h3>
+            <p>通過台灣牙醫師公會優良診所評鑑，持續精進醫療品質</p>
+            <div style="display:flex;gap:16px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+              <span style="background:var(--primary-pale);color:var(--primary);padding:6px 14px;border-radius:999px;font-size:0.8rem;font-weight:600">ISO 認證</span>
+              <span style="background:var(--gold-light);color:var(--gold);padding:6px 14px;border-radius:999px;font-size:0.8rem;font-weight:600">數位診所</span>
+              <span style="background:#FEF3C7;color:#92400E;padding:6px 14px;border-radius:999px;font-size:0.8rem;font-weight:600">優良診所</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Preview -->
+  <section class="doctors-section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">醫師團隊</span>
+        <h2>用心守護您口腔健康的專業</h2>
+        <p>每位醫師皆有豐富的臨床經驗與專科訓練，持續學習最新醫療技術，為患者提供最佳的治療方案。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="doctor-card reveal">
+          <div class="doctor-photo">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-name">陳柏睿 醫師</div>
+            <div class="doctor-title">院長・植牙專科</div>
+            <div class="doctor-bio">台大牙醫系畢業，擁有12年植牙及口腔外科經驗，曾赴德國進修Straumann植牙技術。</div>
+            <div class="doctor-tags">
+              <span class="doctor-tag">植牙</span>
+              <span class="doctor-tag">口腔外科</span>
+              <span class="doctor-tag">骨增生</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal-delay-1">
+          <div class="doctor-photo" style="background:linear-gradient(135deg,#FEF3C7,#FDE68A)">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-name">林欣怡 醫師</div>
+            <div class="doctor-title">矯正專科醫師</div>
+            <div class="doctor-bio">陽明牙醫系，矯正科主任，擅長隱適美透明矯正與兒童早期矯正，深受家長患者信賴。</div>
+            <div class="doctor-tags">
+              <span class="doctor-tag">隱適美</span>
+              <span class="doctor-tag">兒童矯正</span>
+              <span class="doctor-tag">顎骨矯正</span>
+            </div>
+          </div>
+        </div>
+        <div class="doctor-card reveal reveal-delay-2">
+          <div class="doctor-photo" style="background:linear-gradient(135deg,#EDE9FE,#C4B5FD)">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="doctor-info">
+            <div class="doctor-name">黃文哲 醫師</div>
+            <div class="doctor-title">牙周科・兒童牙科</div>
+            <div class="doctor-bio">成大牙醫系，牙周病及兒童牙科雙專科認證，以耐心細心著稱，尤受兒童患者喜愛。</div>
+            <div class="doctor-tags">
+              <span class="doctor-tag">牙周治療</span>
+              <span class="doctor-tag">兒童牙科</span>
+              <span class="doctor-tag">牙齦手術</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px" class="reveal">
+        <a href="doctors.html" class="btn btn-secondary">認識完整醫師團隊</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">患者心聲</span>
+        <h2>真實的回饋，最好的見證</h2>
+        <p>每一個滿意的笑容，都是禾睿持續前進的動力。</p>
+      </div>
+      <div class="grid-3">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            在這裡植牙的經驗非常好！陳醫師非常詳細地說明整個過程，術後恢復也比預期快很多。診所環境乾淨，護理師也很親切。強烈推薦！
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩</div>
+            <div>
+              <div class="testimonial-name">張小姐</div>
+              <div class="testimonial-meta">植牙患者・2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            帶孩子來看兒童牙科，黃醫師超有耐心，把我家原本超怕看牙的小孩哄得願意配合，真的太厲害了。以後全家人都要來這裡看牙！
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨</div>
+            <div>
+              <div class="testimonial-name">林先生</div>
+              <div class="testimonial-meta">兒童牙科患者家長</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            做了隱適美矯正，林醫師說明得很清楚，每次回診都會告知進度。診所系統很完善，預約提醒也很貼心。完成後笑容真的變美很多！
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩</div>
+            <div>
+              <div class="testimonial-name">王同學</div>
+              <div class="testimonial-meta">矯正患者・在校生</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="container">
+      <span class="eyebrow" style="background:rgba(255,255,255,0.15);color:white">立即行動</span>
+      <h2>準備好守護您的口腔健康了嗎？</h2>
+      <p>線上預約初診諮詢，讓我們為您規劃最適合的治療計畫</p>
+      <div class="cta-banner-buttons">
+        <a href="appointment.html" class="btn btn-gold">立即線上預約</a>
+        <a href="tel:+886423456789" class="btn btn-outline-white">📞 (04) 2345-6789</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🦷 禾睿牙醫診所</h3>
+          <p>台中市西屯區的專業牙醫診所，致力提供最高品質的口腔醫療服務，以溫暖的態度守護每位患者的健康與笑容。</p>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">
+            網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="services.html">服務項目</a></li>
+            <li><a href="doctors.html">醫師團隊</a></li>
+            <li><a href="appointment.html">線上預約</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>主要服務</h4>
+          <ul>
+            <li><a href="services.html#implant">植牙手術</a></li>
+            <li><a href="services.html#ortho">牙齒矯正</a></li>
+            <li><a href="services.html#whitening">牙齒美白</a></li>
+            <li><a href="services.html#children">兒童牙科</a></li>
+            <li><a href="services.html#perio">牙周病治療</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>診所資訊</h4>
+          <ul>
+            <li><a href="#">台中市西屯區台灣大道三段123號8F</a></li>
+            <li><a href="tel:+886423456789">(04) 2345-6789</a></li>
+            <li><a href="mailto:info@herui-dental.com.tw">info@herui-dental.com.tw</a></li>
+            <li><a href="#">週一至五 9:00–21:00</a></li>
+            <li><a href="#">週六 9:00–17:00</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2024 禾睿牙醫診所 Herui Dental Clinic. 版權所有。</div>
+        <div>
+          網站製作：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">橋序創研 BridgeSeq Lab</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="回到頂部">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

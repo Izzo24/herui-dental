@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>醫師團隊 — 禾睿牙醫診所｜台中植牙矯正專科醫師</title>
+  <meta name="description" content="認識禾睿牙醫的專業醫師團隊：植牙專科、矯正科、牙周科、兒童牙科等多位專科醫師，提供最專業的口腔醫療服務。">
+  <link rel="canonical" href="https://izzo24.github.io/herui-dental/doctors.html">
+  <meta property="og:title" content="醫師團隊 — 禾睿牙醫診所">
+  <meta property="og:url" content="https://izzo24.github.io/herui-dental/doctors.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><text y='22' x='5' font-size='20' font-family='serif'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "陳柏睿醫師",
+      "jobTitle": "院長・植牙專科",
+      "worksFor": { "@type": "Dentist", "name": "禾睿牙醫診所" },
+      "medicalSpecialty": "Dentistry",
+      "alumniOf": "國立台灣大學牙醫學系"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "林欣怡醫師",
+      "jobTitle": "矯正科專科醫師",
+      "worksFor": { "@type": "Dentist", "name": "禾睿牙醫診所" },
+      "medicalSpecialty": "Dentistry"
+    }
+  ]
+  </script>
+
+  <style>
+    .doctor-full-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+    .doctor-full-photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+      background: linear-gradient(160deg, var(--primary-pale), var(--bg-alt));
+      gap: 20px;
+    }
+    .doctor-full-avatar {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      box-shadow: var(--shadow-md);
+      border: 4px solid white;
+    }
+    .doctor-full-name { font-size: 1.4rem; font-weight: 700; text-align: center; }
+    .doctor-full-role {
+      background: var(--primary);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .doctor-full-body { padding: 40px; }
+    .doctor-full-body h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 20px; }
+    .doctor-credentials { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .doctor-credential {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .credential-dot {
+      width: 8px; height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .credential-text { font-size: 0.9rem; color: var(--text-mid); }
+    .doctor-specialties { display: flex; flex-wrap: wrap; gap: 8px; }
+    .doctor-specialty-tag {
+      padding: 6px 16px;
+      background: var(--primary-pale);
+      color: var(--primary);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid rgba(11,123,116,0.15);
+    }
+    .doctor-divider { height: 1px; background: var(--border); margin: 24px 0; }
+    .doctor-quote {
+      background: var(--primary-pale);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+
+    .values-section { background: var(--bg); }
+    .value-card { text-align: center; }
+    .value-emoji { font-size: 3rem; margin-bottom: 16px; }
+
+    @media (max-width: 900px) {
+      .doctor-full-card { grid-template-columns: 1fr; }
+      .doctor-full-photo { flex-direction: row; padding: 28px; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">🦷 禾睿</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1 4.5 2.5 6L9 21h6l1.5-6C18 13.5 19 11.5 19 9c0-3.5-3-7-7-7z" stroke-linejoin="round"/><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3"/></svg>
+          </div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">禾睿牙醫診所</span>
+            <span class="nav-logo-sub">Herui Dental Clinic</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">首頁</a></li>
+          <li><a href="services.html" class="nav-link">服務項目</a></li>
+          <li><a href="doctors.html" class="nav-link active">醫師團隊</a></li>
+          <li><a href="contact.html" class="nav-link">聯絡我們</a></li>
+        </ul>
+        <a href="appointment.html" class="btn btn-primary nav-cta">立即預約</a>
+        <button class="nav-hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <button class="nav-mobile-close">✕</button>
+    <a href="index.html" class="nav-link">首頁</a>
+    <a href="services.html" class="nav-link">服務項目</a>
+    <a href="doctors.html" class="nav-link">醫師團隊</a>
+    <a href="contact.html" class="nav-link">聯絡我們</a>
+    <a href="appointment.html" class="btn btn-primary">立即預約</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb" style="justify-content:center">
+          <a href="index.html">首頁</a><span class="breadcrumb-sep">›</span><span>醫師團隊</span>
+        </div>
+        <span class="eyebrow">Our Team</span>
+        <h1>用心守護的專業醫師</h1>
+        <p>每位醫師都具備豐富的臨床經驗與持續進修的熱忱，以您的健康和滿意為最高目標。</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <!-- Dr. Chen -->
+      <div class="doctor-full-card reveal">
+        <div class="doctor-full-photo">
+          <div class="doctor-full-avatar">👨‍⚕️</div>
+          <div>
+            <div class="doctor-full-name">陳柏睿 醫師</div>
+            <div style="font-size:0.85rem;color:var(--text-light);margin:4px 0 8px;text-align:center">Dr. Bo-Rui Chen</div>
+            <div class="doctor-full-role">院長・植牙專科</div>
+          </div>
+        </div>
+        <div class="doctor-full-body">
+          <h3>學經歷與認證</h3>
+          <div class="doctor-credentials">
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">國立台灣大學牙醫學系畢業</div>
+            </div>
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">台大醫院口腔外科住院醫師訓練結業</div>
+            </div>
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">德國 Straumann Institute 植牙進階訓練認證</div>
+            </div>
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">台灣牙周病醫學會會員</div>
+            </div>
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">國際植牙學會（ITI）台灣分會成員</div>
+            </div>
+            <div class="doctor-credential">
+              <div class="credential-dot"></div>
+              <div class="credential-text">執業年資 12 年，完成植牙手術逾 3,000 例</div>
+            </div>
+          </div>
+          <div class="doctor-specialties">
+            <span class="doctor-specialty-tag">人工植牙</span>
+            <span class="doctor-specialty-tag">All on 4/6 全口重建</span>
+            <span class="doctor-specialty-tag">骨增生手術</span>
+            <span class="doctor-specialty-tag">口腔外科</span>
+            <span class="doctor-specialty-tag">智齒拔除</span>
+          </div>
+          <div class="doctor-divider"></div>
+          <div class="doctor-quote">
+            「每一顆植牙都承載著患者對生活品質的期待。我們用最精準的技術和最溫暖的態度，讓每位患者都能找回自信的笑容。」
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Lin -->
+      <div class="doctor-full-card reveal">
+        <div class="doctor-full-photo" style="background:linear-gradient(160deg,#FEF3C7,#FDE68A)">
+          <div class="doctor-full-avatar">👩‍⚕️</div>
+          <div>
+            <div class="doctor-full-name">林欣怡 醫師</div>
+            <div style="font-size:0.85rem;color:var(--text-light);margin:4px 0 8px;text-align:center">Dr. Hsin-Yi Lin</div>
+            <div class="doctor-full-role">矯正科主任</div>
+          </div>
+        </div>
+        <div class="doctor-full-body">
+          <h3>學經歷與認證</h3>
+          <div class="doctor-credentials">
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">國立陽明大學牙醫學系畢業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台大醫院牙科部矯正科住院醫師訓練結業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台灣齒顎矯正學會認定專科醫師</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">美國 Align Technology（隱適美）認證鑽石醫師</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">兒童早期矯正（MFT 肌功能訓練）認證</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">執業年資 9 年，矯正案例逾 1,500 件</div></div>
+          </div>
+          <div class="doctor-specialties">
+            <span class="doctor-specialty-tag">隱適美透明矯正</span>
+            <span class="doctor-specialty-tag">傳統金屬矯正</span>
+            <span class="doctor-specialty-tag">兒童早期矯正</span>
+            <span class="doctor-specialty-tag">顎骨矯正</span>
+            <span class="doctor-specialty-tag">二次矯正</span>
+          </div>
+          <div class="doctor-divider"></div>
+          <div class="doctor-quote">
+            「矯正不只是移動牙齒，更是幫助患者建立正確的咬合功能和自信心。我很享受看到患者在矯正結束後露出滿意的笑容。」
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Huang -->
+      <div class="doctor-full-card reveal">
+        <div class="doctor-full-photo" style="background:linear-gradient(160deg,#EDE9FE,#C4B5FD)">
+          <div class="doctor-full-avatar">👨‍⚕️</div>
+          <div>
+            <div class="doctor-full-name">黃文哲 醫師</div>
+            <div style="font-size:0.85rem;color:var(--text-light);margin:4px 0 8px;text-align:center">Dr. Wen-Zhe Huang</div>
+            <div class="doctor-full-role">牙周科・兒童牙科</div>
+          </div>
+        </div>
+        <div class="doctor-full-body">
+          <h3>學經歷與認證</h3>
+          <div class="doctor-credentials">
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">國立成功大學醫學院牙醫學系畢業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">成大醫院牙科部牙周科住院醫師訓練結業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台灣牙周病醫學會認定牙周病專科醫師</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台灣兒童牙科醫學會認定兒童牙科專科醫師</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">美國德州大學兒童牙科進修</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">執業年資 8 年，以耐心細膩著稱</div></div>
+          </div>
+          <div class="doctor-specialties">
+            <span class="doctor-specialty-tag">牙周病治療</span>
+            <span class="doctor-specialty-tag">牙周手術</span>
+            <span class="doctor-specialty-tag">乳牙治療</span>
+            <span class="doctor-specialty-tag">塗氟窩溝封填</span>
+            <span class="doctor-specialty-tag">兒童行為管理</span>
+          </div>
+          <div class="doctor-divider"></div>
+          <div class="doctor-quote">
+            「讓怕牙醫的孩子愛上看牙，讓嚴重牙周病的患者恢復健康，這就是我每天工作最大的成就感。」
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Wang -->
+      <div class="doctor-full-card reveal">
+        <div class="doctor-full-photo" style="background:linear-gradient(160deg,#DCFCE7,#86EFAC)">
+          <div class="doctor-full-avatar">👩‍⚕️</div>
+          <div>
+            <div class="doctor-full-name">王雅婷 醫師</div>
+            <div style="font-size:0.85rem;color:var(--text-light);margin:4px 0 8px;text-align:center">Dr. Ya-Ting Wang</div>
+            <div class="doctor-full-role">一般牙科・美容牙科</div>
+          </div>
+        </div>
+        <div class="doctor-full-body">
+          <h3>學經歷與認證</h3>
+          <div class="doctor-credentials">
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">中山醫學大學牙醫學系畢業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台中榮總牙科部一般牙科訓練結業</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">台灣美容牙科醫學會會員</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">3M 複合樹脂美容修復認證</div></div>
+            <div class="doctor-credential"><div class="credential-dot"></div><div class="credential-text">全瓷冠貼片美學修復進階認證</div></div>
+          </div>
+          <div class="doctor-specialties">
+            <span class="doctor-specialty-tag">全瓷冠貼片</span>
+            <span class="doctor-specialty-tag">複合樹脂修復</span>
+            <span class="doctor-specialty-tag">根管治療</span>
+            <span class="doctor-specialty-tag">一般牙科</span>
+            <span class="doctor-specialty-tag">假牙製作</span>
+          </div>
+          <div class="doctor-divider"></div>
+          <div class="doctor-quote">
+            「美容牙科讓我能透過精細的工藝和審美，幫助患者實現對笑容的美好期待。每一件作品都是藝術。」
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Team Values</span>
+        <h2>我們共同秉持的醫療價值</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card value-card reveal">
+          <div class="value-emoji">🤝</div>
+          <h3>誠信透明</h3>
+          <p>治療前完整說明方案、費用與預期效果，讓您在充分了解後做出決定。</p>
+        </div>
+        <div class="card value-card reveal reveal-delay-1">
+          <div class="value-emoji">📚</div>
+          <h3>持續進修</h3>
+          <p>每年參加國內外研習課程，引進最新醫療技術，提供患者最先進的治療選項。</p>
+        </div>
+        <div class="card value-card reveal reveal-delay-2">
+          <div class="value-emoji">❤️</div>
+          <h3>患者為本</h3>
+          <p>以患者的需求和感受為首要考量，打造讓您放鬆舒適的就醫體驗。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>找到適合您的醫師了嗎？</h2>
+      <p>立即預約，讓我們的醫師為您評估並提供最適合的治療方案</p>
+      <div class="cta-banner-buttons">
+        <a href="appointment.html" class="btn btn-gold">立即線上預約</a>
+        <a href="contact.html" class="btn btn-outline-white">有問題？聯絡我們</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🦷 禾睿牙醫診所</h3>
+          <p>台中市西屯區的專業牙醫診所，提供全方位口腔醫療照護。</p>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作</div>
+        </div>
+        <div class="footer-col">
+          <h4>快速連結</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="services.html">服務項目</a></li>
+            <li><a href="doctors.html">醫師團隊</a></li>
+            <li><a href="appointment.html">線上預約</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>主要服務</h4>
+          <ul>
+            <li><a href="services.html#implant">植牙手術</a></li>
+            <li><a href="services.html#ortho">牙齒矯正</a></li>
+            <li><a href="services.html#whitening">牙齒美白</a></li>
+            <li><a href="services.html#children">兒童牙科</a></li>
+            <li><a href="services.html#perio">牙周病治療</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>診所資訊</h4>
+          <ul>
+            <li><a href="#">台中市西屯區台灣大道三段123號8F</a></li>
+            <li><a href="tel:+886423456789">(04) 2345-6789</a></li>
+            <li><a href="#">週一至五 9:00–21:00</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2024 禾睿牙醫診所 Herui Dental Clinic. 版權所有。</div>
+        <div>網站製作：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">橋序創研 BridgeSeq Lab</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="回到頂部">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
