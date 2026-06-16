@@ -737,3 +737,22 @@ footer {
   border: 2px dashed var(--border);
 }
 .map-embed svg { width: 40px; height: 40px; stroke: var(--primary); fill: none; stroke-width: 1.5; }
+
+/* ── Transparent Nav: white text for dark hero backgrounds ── */
+.site-nav:not(.scrolled) .nav-logo-name { color: white; }
+.site-nav:not(.scrolled) .nav-logo-sub { color: rgba(255,255,255,0.65); }
+.site-nav:not(.scrolled) .nav-link { color: rgba(255,255,255,0.88); }
+.site-nav:not(.scrolled) .nav-link:hover,
+.site-nav:not(.scrolled) .nav-link.active { color: white; }
+.site-nav:not(.scrolled) .nav-link::after { background: rgba(255,255,255,0.8); }
+.site-nav:not(.scrolled) .nav-hamburger span { background: white; }
+.site-nav:not(.scrolled) .nav-cta.btn-primary {
+  background: rgba(255,255,255,0.18);
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  box-shadow: none;
+}
+.site-nav:not(.scrolled) .nav-cta.btn-primary:hover {
+  background: rgba(255,255,255,0.28);
+  transform: translateY(-1px);
+}
