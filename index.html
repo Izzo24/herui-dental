@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>禾睿牙醫診所 — 台中專業牙科｜植牙・矯正・兒童牙科</title>
-  <meta name="description" content="禾睿牙醫診所位於台中，提供植牙、牙齒矯正、美白、兒童牙科等完整牙醫服務。採預約制不等待，親切專業的醫療團隊守護您全家的口腔健康。">
+  <meta name="description" content="禾睿牙醫診所位於台中，提供植牙、牙齒矯正、美白、兒童牙科等完整牙科服務。採預約制不等待，親切專業的醫療團隊守護您全家的口腔健康。">
   <meta name="keywords" content="台中牙醫,禾睿牙醫,台中植牙,台中矯正,台中牙科診所,牙齒美白,兒童牙科,預防牙科">
   <link rel="canonical" href="https://izzo24.github.io/herui-dental/">
 
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><text y='22' x='5' font-size='20' font-family='serif'>🦷</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B7B74'/><path d='M16 5c-2.5 0-4.3.9-5.5 2.2C9.3 6 7.8 5.5 6.8 6.1c-1 .5-1.8 2-.9 4.9.7 2.1.4 4.2-.7 6.2l1.1 7c.3 1.4 1.4 1.8 1.9.4l.6-3.1c.3-1.4 1.4-2.4 2.4-2.4h1.6c1 0 2 1 2.4 2.4l.6 3.1c.5 1.4 1.6 1 1.9-.4l1.1-7c-1.1-2-.9-4.1-.2-6.2.9-2.9.1-4.4-.9-4.9-1-.6-2.5-.1-3.5 1.1C20.2 5.9 18.4 5 16 5z' fill='%23fff'/></svg>">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,7 +161,7 @@
       align-items: center;
       justify-content: center;
     }
-    .hero-emoji { font-size: 7rem; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2)); }
+    .hero-emoji { width: 100%; height: 100%; overflow: hidden; border-radius: 16px; }
 
     .hero-float-1 {
       position: absolute;
@@ -223,7 +223,7 @@
       box-shadow: var(--shadow-lg);
       text-align: center;
     }
-    .why-emoji { font-size: 4rem; margin-bottom: 16px; }
+    .why-emoji { margin-bottom: 16px; overflow: hidden; border-radius: 12px; height: 220px; }
     .why-visual-card h3 { margin-bottom: 8px; }
     .why-visual-card p { font-size: 0.9rem; }
     .why-badge {
@@ -277,7 +277,7 @@
     }
     .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-emoji { font-size: 2.5rem; margin-bottom: 16px; }
+    .service-emoji { height: 160px; margin-bottom: 16px; overflow: hidden; border-radius: 12px; }
     .service-card h3 { margin-bottom: 10px; }
     .service-card p { font-size: 0.875rem; margin-bottom: 20px; }
     .service-card-link {
@@ -301,13 +301,16 @@
       .why-visual { order: -1; }
       .hero-visual-main { width: 280px; height: 280px; }
     }
+    .hero-emoji img,.service-emoji img,.why-emoji img { width:100%;height:100%;object-fit:cover;display:block; }
+    .doctor-photo img { width:100%;height:100%;object-fit:cover;display:block; }
+    .testimonial-avatar img { width:44px;height:44px;object-fit:cover;border-radius:50%;display:block; }
   </style>
 </head>
 <body>
 
   <!-- Page Loader -->
   <div class="page-loader" id="pageLoader">
-    <div class="loader-logo">🦷 禾睿</div>
+    <div class="loader-logo">禾睿</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 
@@ -391,7 +394,7 @@
         <div class="hero-visual">
           <div class="hero-visual-main">
             <div class="hero-visual-inner">
-              <div class="hero-emoji">🦷</div>
+              <div class="hero-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/hero.webp" alt="禾睿牙醫診所" loading="lazy"></div>
             </div>
           </div>
           <div class="float-card hero-float-1">
@@ -402,7 +405,7 @@
             </div>
           </div>
           <div class="float-card hero-float-2 float-card-2">
-            <div class="float-card-icon">⭐</div>
+            <div class="float-card-icon">★</div>
             <div>
               <div class="float-card-text">4.9 / 5.0</div>
               <div class="float-card-sub">Google 評價</div>
@@ -492,37 +495,37 @@
 
       <div class="grid-3">
         <div class="service-card reveal">
-          <div class="service-emoji">🦷</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/service-implant.webp" alt="植牙" loading="lazy"></div>
           <h3>植牙</h3>
           <p>採用德國 Straumann 植牙系統，手術精準、骨整合穩定，讓您找回自然咬合力。</p>
           <a href="services.html#implant" class="service-card-link">了解更多 →</a>
         </div>
         <div class="service-card reveal reveal-delay-1">
-          <div class="service-emoji">😁</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/service-ortho.webp" alt="牙齒矯正" loading="lazy"></div>
           <h3>牙齒矯正</h3>
           <p>提供傳統金屬、陶瓷及隱適美透明矯正，針對您的需求規劃最佳療程。</p>
           <a href="services.html#ortho" class="service-card-link">了解更多 →</a>
         </div>
         <div class="service-card reveal reveal-delay-2">
-          <div class="service-emoji">✨</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/service-whitening.webp" alt="牙齒美白" loading="lazy"></div>
           <h3>牙齒美白</h3>
           <p>專業冷光美白與居家漂白套組，安全有效地為您還原亮白自信笑容。</p>
           <a href="services.html#whitening" class="service-card-link">了解更多 →</a>
         </div>
         <div class="service-card reveal reveal-delay-1">
-          <div class="service-emoji">🧒</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/service-kids.webp" alt="兒童牙科" loading="lazy"></div>
           <h3>兒童牙科</h3>
           <p>溫柔友善的環境與兒牙專科醫師，幫助孩子從小建立正確的口腔保健習慣。</p>
           <a href="services.html#children" class="service-card-link">了解更多 →</a>
         </div>
         <div class="service-card reveal reveal-delay-2">
-          <div class="service-emoji">🩺</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/hero-clinic.webp" alt="牙周病治療" loading="lazy"></div>
           <h3>牙周病治療</h3>
           <p>深層牙結石清除、牙周翻瓣手術，全方位守護您的牙床健康。</p>
           <a href="services.html#perio" class="service-card-link">了解更多 →</a>
         </div>
         <div class="service-card reveal reveal-delay-3">
-          <div class="service-emoji">🛡️</div>
+          <div class="service-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/hero.webp" alt="預防保健" loading="lazy"></div>
           <h3>預防保健</h3>
           <p>定期洗牙、塗氟、窩溝封填，預防勝於治療，守護全家口腔健康。</p>
           <a href="services.html#prevention" class="service-card-link">了解更多 →</a>
@@ -579,8 +582,8 @@
         </div>
         <div class="why-visual reveal reveal-delay-2">
           <div class="why-visual-card">
-            <div class="why-badge">🏆 口腔醫學認證</div>
-            <div class="why-emoji">🏥</div>
+            <div class="why-badge">✦ 口腔醫學認證</div>
+            <div class="why-emoji"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/hero-clinic.webp" alt="禾睿牙醫診所" loading="lazy"></div>
             <h3>台中醫療品質認證診所</h3>
             <p>通過台灣牙醫師公會優良診所評鑑，持續精進醫療品質</p>
             <div style="display:flex;gap:16px;justify-content:center;margin-top:20px;flex-wrap:wrap">
@@ -605,9 +608,7 @@
 
       <div class="grid-3">
         <div class="doctor-card reveal">
-          <div class="doctor-photo">
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <div class="doctor-photo"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/doctor-1.webp" alt="陳柏睿醫師" loading="lazy"></div>
           <div class="doctor-info">
             <div class="doctor-name">陳柏睿 醫師</div>
             <div class="doctor-title">院長・植牙專科</div>
@@ -620,9 +621,7 @@
           </div>
         </div>
         <div class="doctor-card reveal reveal-delay-1">
-          <div class="doctor-photo" style="background:linear-gradient(135deg,#FEF3C7,#FDE68A)">
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <div class="doctor-photo"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/doctor-2.webp" alt="林欣怡醫師" loading="lazy"></div>
           <div class="doctor-info">
             <div class="doctor-name">林欣怡 醫師</div>
             <div class="doctor-title">矯正專科醫師</div>
@@ -635,9 +634,7 @@
           </div>
         </div>
         <div class="doctor-card reveal reveal-delay-2">
-          <div class="doctor-photo" style="background:linear-gradient(135deg,#EDE9FE,#C4B5FD)">
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <div class="doctor-photo"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/doctor-3.webp" alt="黃文哲醫師" loading="lazy"></div>
           <div class="doctor-info">
             <div class="doctor-name">黃文哲 醫師</div>
             <div class="doctor-title">牙周科・兒童牙科</div>
@@ -672,7 +669,7 @@
             在這裡植牙的經驗非常好！陳醫師非常詳細地說明整個過程，術後恢復也比預期快很多。診所環境乾淨，護理師也很親切。強烈推薦！
           </p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">👩</div>
+            <div class="testimonial-avatar"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/avatar-1.webp" alt="張小姐" loading="lazy"></div>
             <div>
               <div class="testimonial-name">張小姐</div>
               <div class="testimonial-meta">植牙患者・2024</div>
@@ -685,7 +682,7 @@
             帶孩子來看兒童牙科，黃醫師超有耐心，把我家原本超怕看牙的小孩哄得願意配合，真的太厲害了。以後全家人都要來這裡看牙！
           </p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">👨</div>
+            <div class="testimonial-avatar"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/avatar-2.webp" alt="林先生" loading="lazy"></div>
             <div>
               <div class="testimonial-name">林先生</div>
               <div class="testimonial-meta">兒童牙科患者家長</div>
@@ -698,7 +695,7 @@
             做了隱適美矯正，林醫師說明得很清楚，每次回診都會告知進度。診所系統很完善，預約提醒也很貼心。完成後笑容真的變美很多！
           </p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">👩</div>
+            <div class="testimonial-avatar"><img src="https://raw.githubusercontent.com/Izzo24/herui-dental/main/images/avatar-3.webp" alt="王同學" loading="lazy"></div>
             <div>
               <div class="testimonial-name">王同學</div>
               <div class="testimonial-meta">矯正患者・在校生</div>
@@ -717,7 +714,7 @@
       <p>線上預約初診諮詢，讓我們為您規劃最適合的治療計畫</p>
       <div class="cta-banner-buttons">
         <a href="appointment.html" class="btn btn-gold">立即線上預約</a>
-        <a href="tel:+886423456789" class="btn btn-outline-white">📞 (04) 2345-6789</a>
+        <a href="tel:+886423456789" class="btn btn-outline-white">(04) 2345-6789</a>
       </div>
     </div>
   </div>
@@ -727,7 +724,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>🦷 禾睿牙醫診所</h3>
+          <h3>禾睿牙醫診所</h3>
           <p>台中市西屯區的專業牙醫診所，致力提供最高品質的口腔醫療服務，以溫暖的態度守護每位患者的健康與笑容。</p>
           <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">
             網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作
