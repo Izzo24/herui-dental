@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>聯絡我們 — 禾睿牙醫診所｜台中西屯區牙醫</title>
-  <meta name="description" content="禾睿牙醫診所聯絡資訊：地址台中市西屯區台灣大道三段123號8F，電話(04)2345-6789，週一至四9-21時，週六9-17時。提供線上諮詢表單。">
+  <title>è¯çµ¡æå â ç¦¾ç¿çé«è¨ºæï½å°ä¸­è¥¿å±¯åçé«</title>
+  <meta name="description" content="ç¦¾ç¿çé«è¨ºæè¯çµ¡è³è¨ï¼å°åå°ä¸­å¸è¥¿å±¯åå°ç£å¤§éä¸æ®µ123è8Fï¼é»è©±(04)2345-6789ï¼é±ä¸è³å9-21æï¼é±å­9-17æãæä¾ç·ä¸è«®è©¢è¡¨å®ã">
   <link rel="canonical" href="https://izzo24.github.io/herui-dental/contact.html">
-  <meta property="og:title" content="聯絡我們 — 禾睿牙醫診所">
+  <meta property="og:title" content="è¯çµ¡æå â ç¦¾ç¿çé«è¨ºæ">
   <meta property="og:url" content="https://izzo24.github.io/herui-dental/contact.html">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B7B74'/%3E%3Cpath fill='white' d='M16 7c-2.8 0-5 2.2-5 4.5 0 1.5.5 2.8 1 4.5.5 1.5.5 3 .5 5 0 .6.4 1 1 1s1-.4 1-1c0-1.1.9-2 2-2s2 .9 2 2c0 .6.4 1 1 1s1-.4 1-1c0-2 0-3.5.5-5 .5-1.7 1-3 1-4.5C22 9.2 19.8 7 17 7c-.7 0-1.3.1-1.5.3-.2-.2-.8-.3-.5-.3z'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,12 +50,17 @@
       .contact-layout { grid-template-columns: 1fr; }
       .contact-form-card { padding: 28px; }
     }
-  </style>
+  
+  .site-nav .logo-white { display:block; }
+  .site-nav .logo-color { display:none; }
+  .site-nav.scrolled .logo-white { display:none; }
+  .site-nav.scrolled .logo-color { display:block; }
+</style>
 </head>
 <body>
 
   <div class="page-loader" id="pageLoader">
-    <div class="loader-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M12 2C9 2 7 4.3 7 7c0 1.8.6 3.5 1.2 5.2.6 1.8.8 3.6.8 5.8 0 .6.4 1 1 1s1-.4 1-1c0-1.1.9-2 2-2s2 .9 2 2c0 .6.4 1 1 1s1-.4 1-1c0-2.2.2-4 .8-5.8C18.4 10.5 19 8.8 19 7c0-2.7-2-5-5-5-.8 0-1.5.2-2 .5-.5-.3-1.2-.5-2-.5z"/></svg> 禾睿</div>
+    <div class="loader-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M12 2C9 2 7 4.3 7 7c0 1.8.6 3.5 1.2 5.2.6 1.8.8 3.6.8 5.8 0 .6.4 1 1 1s1-.4 1-1c0-1.1.9-2 2-2s2 .9 2 2c0 .6.4 1 1 1s1-.4 1-1c0-2.2.2-4 .8-5.8C18.4 10.5 19 8.8 19 7c0-2.7-2-5-5-5-.8 0-1.5.2-2 .5-.5-.3-1.2-.5-2-.5z"/></svg> ç¦¾ç¿</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
   </div>
 
@@ -63,43 +68,38 @@
     <div class="container">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">
-          <div class="nav-logo-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9c0 2.5 1 4.5 2.5 6L9 21h6l1.5-6C18 13.5 19 11.5 19 9c0-3.5-3-7-7-7z" stroke-linejoin="round"/><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3"/></svg>
-          </div>
-          <div class="nav-logo-text">
-            <span class="nav-logo-name">禾睿牙醫診所</span>
-            <span class="nav-logo-sub">Herui Dental Clinic</span>
-          </div>
+          <img src="logos/herui-dental-logo-white.png" alt="禾睿牙醫診所" class="logo-white" style="height:46px;width:auto;">
+          <img src="logos/herui-dental-logo.png" alt="禾睿牙醫診所" class="logo-color" style="height:46px;width:auto;display:none;">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">首頁</a></li>
-          <li><a href="services.html" class="nav-link">服務項目</a></li>
-          <li><a href="doctors.html" class="nav-link">醫師團隊</a></li>
-          <li><a href="contact.html" class="nav-link active">聯絡我們</a></li>
+          <li><a href="index.html" class="nav-link">é¦é </a></li>
+          <li><a href="services.html" class="nav-link">æåé ç®</a></li>
+          <li><a href="doctors.html" class="nav-link">é«å¸«åé</a></li>
+          <li><a href="contact.html" class="nav-link active">è¯çµ¡æå</a></li>
         </ul>
-        <a href="appointment.html" class="btn btn-primary nav-cta">立即預約</a>
-        <button class="nav-hamburger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+        <a href="appointment.html" class="btn btn-primary nav-cta">ç«å³é ç´</a>
+        <button class="nav-hamburger" aria-label="éåé¸å®"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
   <div class="nav-mobile">
-    <button class="nav-mobile-close">✕</button>
-    <a href="index.html" class="nav-link">首頁</a>
-    <a href="services.html" class="nav-link">服務項目</a>
-    <a href="doctors.html" class="nav-link">醫師團隊</a>
-    <a href="contact.html" class="nav-link">聯絡我們</a>
-    <a href="appointment.html" class="btn btn-primary">立即預約</a>
+    <button class="nav-mobile-close">â</button>
+    <a href="index.html" class="nav-link">é¦é </a>
+    <a href="services.html" class="nav-link">æåé ç®</a>
+    <a href="doctors.html" class="nav-link">é«å¸«åé</a>
+    <a href="contact.html" class="nav-link">è¯çµ¡æå</a>
+    <a href="appointment.html" class="btn btn-primary">ç«å³é ç´</a>
   </div>
 
   <div class="page-hero">
     <div class="container">
       <div class="page-hero-content">
         <div class="breadcrumb" style="justify-content:center">
-          <a href="index.html">首頁</a><span class="breadcrumb-sep">›</span><span>聯絡我們</span>
+          <a href="index.html">é¦é </a><span class="breadcrumb-sep">âº</span><span>è¯çµ¡æå</span>
         </div>
         <span class="eyebrow">Contact Us</span>
-        <h1>我們期待您的來訪</h1>
-        <p>有任何問題，歡迎填寫下方表單或直接來電，我們將盡快回覆。</p>
+        <h1>æåæå¾æ¨çä¾è¨ª</h1>
+        <p>æä»»ä½åé¡ï¼æ­¡è¿å¡«å¯«ä¸æ¹è¡¨å®æç´æ¥ä¾é»ï¼æåå°ç¡å¿«åè¦ã</p>
       </div>
     </div>
   </div>
@@ -110,15 +110,15 @@
 
         <!-- Left: Info -->
         <div class="contact-info-section reveal">
-          <h2>診所聯絡資訊</h2>
+          <h2>è¨ºæè¯çµ¡è³è¨</h2>
 
           <div class="contact-info-item">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">診所地址</div>
-              <div class="contact-info-value">台中市西屯區台灣大道三段 123 號 8 樓</div>
+              <div class="contact-info-label">è¨ºæå°å</div>
+              <div class="contact-info-value">å°ä¸­å¸è¥¿å±¯åå°ç£å¤§éä¸æ®µ 123 è 8 æ¨</div>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
               <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.59a16 16 0 006.29 6.29l.96-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">電話</div>
+              <div class="contact-info-label">é»è©±</div>
               <div class="contact-info-value"><a href="tel:+886423456789" style="color:var(--primary)">(04) 2345-6789</a></div>
             </div>
           </div>
@@ -137,7 +137,7 @@
               <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">電子郵件</div>
+              <div class="contact-info-label">é»å­éµä»¶</div>
               <div class="contact-info-value"><a href="mailto:info@herui-dental.com.tw" style="color:var(--primary)">info@herui-dental.com.tw</a></div>
             </div>
           </div>
@@ -147,11 +147,11 @@
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div>
-              <div class="contact-info-label">看診時間</div>
+              <div class="contact-info-label">çè¨ºæé</div>
               <div class="contact-info-value">
-                週一至週五 09:00 – 21:00<br>
-                週六 09:00 – 17:00<br>
-                週日及國定假日公休
+                é±ä¸è³é±äº 09:00 â 21:00<br>
+                é±å­ 09:00 â 17:00<br>
+                é±æ¥ååå®åæ¥å¬ä¼
               </div>
             </div>
           </div>
@@ -160,79 +160,79 @@
           <div class="map-embed" style="margin:32px 0">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
-              <div style="font-weight:600;color:var(--text);font-size:1rem">禾睿牙醫診所</div>
-              <div>台中市西屯區台灣大道三段 123 號 8 樓</div>
-              <a href="https://maps.google.com/?q=台中市西屯區台灣大道三段123號" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:12px;font-size:0.8rem;padding:8px 20px">
-                在 Google Maps 開啟
+              <div style="font-weight:600;color:var(--text);font-size:1rem">ç¦¾ç¿çé«è¨ºæ</div>
+              <div>å°ä¸­å¸è¥¿å±¯åå°ç£å¤§éä¸æ®µ 123 è 8 æ¨</div>
+              <a href="https://maps.google.com/?q=å°ä¸­å¸è¥¿å±¯åå°ç£å¤§éä¸æ®µ123è" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:12px;font-size:0.8rem;padding:8px 20px">
+                å¨ Google Maps éå
               </a>
             </div>
           </div>
 
           <div class="transport-section">
-            <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="5" y="2" width="14" height="20" rx="4"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/><circle cx="8.5" cy="10.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="10.5" r="1.5" fill="currentColor"/></svg> 交通資訊</h3>
+            <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="5" y="2" width="14" height="20" rx="4"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/><circle cx="8.5" cy="10.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="10.5" r="1.5" fill="currentColor"/></svg> äº¤éè³è¨</h3>
             <div class="transport-item">
               <span class="transport-emoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><rect x="5" y="2" width="14" height="20" rx="4"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/><circle cx="8.5" cy="10.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="10.5" r="1.5" fill="currentColor"/></svg></span>
-              <span>捷運台灣大道站 3 號出口，步行約 5 分鐘</span>
+              <span>æ·éå°ç£å¤§éç« 3 èåºå£ï¼æ­¥è¡ç´ 5 åé</span>
             </div>
             <div class="transport-item">
               <span class="transport-emoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M8 6v6M16 6v6M2 12h20M18 18h2a1 1 0 0 0 1-1v-5l-3-7H6L3 12v5a1 1 0 0 0 1 1h2"/><circle cx="8" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></svg></span>
-              <span>公車台灣大道台文站，步行 2 分鐘</span>
+              <span>å¬è»å°ç£å¤§éå°æç«ï¼æ­¥è¡ 2 åé</span>
             </div>
             <div class="transport-item">
               <span class="transport-emoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M5 17H3a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2l3-6h10l3 6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg></span>
-              <span>建議停放於大樓附設停車場（初診免費 2 小時）</span>
+              <span>å»ºè­°åæ¾æ¼å¤§æ¨éè¨­åè»å ´ï¼åè¨ºåè²» 2 å°æï¼</span>
             </div>
             <div class="transport-item">
               <span class="transport-emoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 0 0-1 1v4l-3.5 4.5M9 6h6"/><path d="m15.5 11.5-5-5 5-2"/></svg></span>
-              <span>YouBike 2.0 台灣大道站距診所 100 公尺</span>
+              <span>YouBike 2.0 å°ç£å¤§éç«è·è¨ºæ 100 å¬å°º</span>
             </div>
           </div>
         </div>
 
         <!-- Right: Form -->
         <div class="contact-form-card reveal reveal-delay-1">
-          <h3 style="margin-bottom:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 傳訊息給我們</h3>
-          <p style="font-size:0.875rem;color:var(--text-light);margin-bottom:32px">填寫表單後，我們將於一個工作天內回覆</p>
+          <h3 style="margin-bottom:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> å³è¨æ¯çµ¦æå</h3>
+          <p style="font-size:0.875rem;color:var(--text-light);margin-bottom:32px">å¡«å¯«è¡¨å®å¾ï¼æåå°æ¼ä¸åå·¥ä½å¤©å§åè¦</p>
 
           <form id="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">您的姓名 <span class="req">*</span></label>
-                <input type="text" class="form-input" placeholder="王小明" required>
+                <label class="form-label">æ¨çå§å <span class="req">*</span></label>
+                <input type="text" class="form-input" placeholder="çå°æ" required>
               </div>
               <div class="form-group">
-                <label class="form-label">聯絡電話 <span class="req">*</span></label>
+                <label class="form-label">è¯çµ¡é»è©± <span class="req">*</span></label>
                 <input type="tel" class="form-input" placeholder="09XX-XXX-XXX" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">電子郵件</label>
+              <label class="form-label">é»å­éµä»¶</label>
               <input type="email" class="form-input" placeholder="your@email.com">
             </div>
 
             <div class="form-group">
-              <label class="form-label">諮詢主題 <span class="req">*</span></label>
+              <label class="form-label">è«®è©¢ä¸»é¡ <span class="req">*</span></label>
               <select class="form-select" required>
-                <option value="">請選擇</option>
-                <option>服務項目諮詢</option>
-                <option>費用相關問題</option>
-                <option>預約相關</option>
-                <option>就醫前疑問</option>
-                <option>其他</option>
+                <option value="">è«é¸æ</option>
+                <option>æåé ç®è«®è©¢</option>
+                <option>è²»ç¨ç¸éåé¡</option>
+                <option>é ç´ç¸é</option>
+                <option>å°±é«åçå</option>
+                <option>å¶ä»</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label">訊息內容 <span class="req">*</span></label>
-              <textarea class="form-textarea" rows="5" placeholder="請詳述您的問題或需求，我們將盡快為您回覆…" required></textarea>
+              <label class="form-label">è¨æ¯å§å®¹ <span class="req">*</span></label>
+              <textarea class="form-textarea" rows="5" placeholder="è«è©³è¿°æ¨çåé¡æéæ±ï¼æåå°ç¡å¿«çºæ¨åè¦â¦" required></textarea>
             </div>
 
             <div class="form-group">
-              <label class="form-label">偏好聯絡方式</label>
+              <label class="form-label">åå¥½è¯çµ¡æ¹å¼</label>
               <div class="form-checkbox-group">
                 <label class="form-checkbox-label">
-                  <input type="checkbox" checked> 電話
+                  <input type="checkbox" checked> é»è©±
                 </label>
                 <label class="form-checkbox-label">
                   <input type="checkbox"> Email
@@ -244,12 +244,12 @@
             </div>
 
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>️ 送出訊息
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>ï¸ éåºè¨æ¯
             </button>
           </form>
 
           <div style="margin-top:28px;padding-top:28px;border-top:1px solid var(--border)">
-            <p style="font-size:0.875rem;color:var(--text-mid);text-align:center;margin-bottom:16px">或直接撥打電話預約</p>
+            <p style="font-size:0.875rem;color:var(--text-mid);text-align:center;margin-bottom:16px">æç´æ¥æ¥æé»è©±é ç´</p>
             <a href="tel:+886423456789" class="btn btn-secondary" style="width:100%;justify-content:center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (04) 2345-6789
             </a>
@@ -263,11 +263,11 @@
   <!-- CTA -->
   <div class="cta-banner">
     <div class="container">
-      <h2>準備好來訪了嗎？</h2>
-      <p>立即線上預約，讓我們為您安排最方便的看診時間</p>
+      <h2>æºåå¥½ä¾è¨ªäºåï¼</h2>
+      <p>ç«å³ç·ä¸é ç´ï¼è®æåçºæ¨å®æææ¹ä¾¿ççè¨ºæé</p>
       <div class="cta-banner-buttons">
-        <a href="appointment.html" class="btn btn-gold">立即線上預約</a>
-        <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">了解橋序創研</a>
+        <a href="appointment.html" class="btn btn-gold">ç«å³ç·ä¸é ç´</a>
+        <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">äºè§£æ©åºåµç </a>
       </div>
     </div>
   </div>
@@ -276,46 +276,46 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M12 2C9 2 7 4.3 7 7c0 1.8.6 3.5 1.2 5.2.6 1.8.8 3.6.8 5.8 0 .6.4 1 1 1s1-.4 1-1c0-1.1.9-2 2-2s2 .9 2 2c0 .6.4 1 1 1s1-.4 1-1c0-2.2.2-4 .8-5.8C18.4 10.5 19 8.8 19 7c0-2.7-2-5-5-5-.8 0-1.5.2-2 .5-.5-.3-1.2-.5-2-.5z"/></svg> 禾睿牙醫診所</h3>
-          <p>台中市西屯區的專業牙醫診所，提供全方位口腔醫療照護。</p>
-          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">網站由 <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">橋序創研</a> 製作</div>
+          <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M12 2C9 2 7 4.3 7 7c0 1.8.6 3.5 1.2 5.2.6 1.8.8 3.6.8 5.8 0 .6.4 1 1 1s1-.4 1-1c0-1.1.9-2 2-2s2 .9 2 2c0 .6.4 1 1 1s1-.4 1-1c0-2.2.2-4 .8-5.8C18.4 10.5 19 8.8 19 7c0-2.7-2-5-5-5-.8 0-1.5.2-2 .5-.5-.3-1.2-.5-2-.5z"/></svg> ç¦¾ç¿çé«è¨ºæ</h3>
+          <p>å°ä¸­å¸è¥¿å±¯åçå°æ¥­çé«è¨ºæï¼æä¾å¨æ¹ä½å£èé«çç§è­·ã</p>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.4)">ç¶²ç«ç± <a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.6)">æ©åºåµç </a> è£½ä½</div>
         </div>
         <div class="footer-col">
-          <h4>快速連結</h4>
+          <h4>å¿«éé£çµ</h4>
           <ul>
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="services.html">服務項目</a></li>
-            <li><a href="doctors.html">醫師團隊</a></li>
-            <li><a href="appointment.html">線上預約</a></li>
-            <li><a href="contact.html">聯絡我們</a></li>
+            <li><a href="index.html">é¦é </a></li>
+            <li><a href="services.html">æåé ç®</a></li>
+            <li><a href="doctors.html">é«å¸«åé</a></li>
+            <li><a href="appointment.html">ç·ä¸é ç´</a></li>
+            <li><a href="contact.html">è¯çµ¡æå</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>主要服務</h4>
+          <h4>ä¸»è¦æå</h4>
           <ul>
-            <li><a href="services.html#implant">植牙手術</a></li>
-            <li><a href="services.html#ortho">牙齒矯正</a></li>
-            <li><a href="services.html#whitening">牙齒美白</a></li>
-            <li><a href="services.html#children">兒童牙科</a></li>
+            <li><a href="services.html#implant">æ¤çæè¡</a></li>
+            <li><a href="services.html#ortho">çé½ç¯æ­£</a></li>
+            <li><a href="services.html#whitening">çé½ç¾ç½</a></li>
+            <li><a href="services.html#children">åç«¥çç§</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>診所資訊</h4>
+          <h4>è¨ºæè³è¨</h4>
           <ul>
-            <li><a href="#">台中市西屯區台灣大道三段123號8F</a></li>
+            <li><a href="#">å°ä¸­å¸è¥¿å±¯åå°ç£å¤§éä¸æ®µ123è8F</a></li>
             <li><a href="tel:+886423456789">(04) 2345-6789</a></li>
-            <li><a href="#">週一至五 9:00—21:00</a></li>
+            <li><a href="#">é±ä¸è³äº 9:00â21:00</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>© 2024 禾睿牙醫診所 Herui Dental Clinic. 版權所有。</div>
-        <div>網站製作：<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">橋序創研 BridgeSeq Lab</a></div>
+        <div>Â© 2024 ç¦¾ç¿çé«è¨ºæ Herui Dental Clinic. çæ¬ææã</div>
+        <div>ç¶²ç«è£½ä½ï¼<a href="https://bridgeseqlab.com" target="_blank" rel="noopener noreferrer">æ©åºåµç  BridgeSeq Lab</a></div>
       </div>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="回到頂部">
+  <button id="back-to-top" aria-label="åå°é é¨">
     <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
